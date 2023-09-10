@@ -4,7 +4,7 @@ author: Tanay Shah
 tags: [windows, persistence, log poisoning, wmi, powershell]
 ---
 
-
+# [🔗PowerKnocka](https://github.com/Altoid0/PowerKnocka)
 
 ## Origin Story
 Over here at CPP's cyber club SWIFT, we have a tradition of hosting CCDC-esque competitions, dubbed Red vs Blue (RvB) to train students on the blue teaming side and to expose them to what working on a mock company environment is like. The primary emphasis of this is to teach people how to deal with red team. As such we prestage a lot of misconfigurations and vulnerabilities on the blue team's network to allow red team to have a fun and easy time. On the linux side of things something we historically do is replace the pam_deny module with pam_permit so that event in the event blue teams reconfigure policies, red team can maintain access. However, this is not as easily achomplished on Windows. This is where PowerKnocka comes in.
