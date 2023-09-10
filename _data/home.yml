@@ -12,8 +12,8 @@ navbar_entries:
     url: https://twitter.com/Altoid0day
 
 project_entries:
-  - title: PowerKocka
-    url: powerkocka
+  - title: PowerKnocka
+    url: powerknocka
     desc: Log poisoning persistence mechanism for Windows hosts
 
   - title: MintKit
