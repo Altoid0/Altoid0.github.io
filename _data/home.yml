@@ -17,7 +17,7 @@ project_entries:
     desc: Log poisoning persistence mechanism for Windows hosts
 
   - title: MintKit
-    url: overview-post
+    url: https://github.com/Altoid0/MintKit
     desc: Simple and quick red team arsenal for competition red team engagements of Windows hosts
     highlight: WIP
     
