@@ -17,6 +17,10 @@ tags: [ccdc, blue team, competitions]
   - [Script Limitations](#script-limitations)
   - [Dovetail](#dovetail)
   - [Development Mindgames](#development-mindgames)
+    - [Wininit](#wininit)
+    - [Bubba Gumper](#bubba-gumper)
+    - [Misc.ps1](#miscps1)
+    - [Firewall of the gods](#firewall-of-the-gods)
 - [Feedback](#feedback)
   - [WRCCDC](#wrccdc)
   - [NCCDC](#nccdc)
@@ -76,11 +80,10 @@ For rounds where Dovetail was used, the following child scripts were executed in
  - Hard.ps1 - Implements pass-the-hash mitigations, configures Windows defender and its extended capabilities, and sets up some fun tricks for red team to scratch their heads at.
 
 ## [Development Mindgames](#development-mindgames)
-Bubba Gumper
-Firewall of the gods
-Wininit
-Misc.ps1
-Leaving in Dovetail for NCCDC
+### [Wininit](#wininit)
+### [Bubba Gumper](#bubba-gumper)
+### [Misc.ps1](#misc.ps1)
+### [Firewall of the gods](#firewall-of-the-gods)
 
 # [Feedback](#feedback)
 ## [WRCCDC](#wrccdc)
