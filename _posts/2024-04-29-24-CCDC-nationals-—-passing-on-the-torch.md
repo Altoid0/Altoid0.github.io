@@ -35,13 +35,15 @@ tags: [ccdc, competitions, blue team, DFIR]
 ![team picture](../images/24CCDCNats.png)
 "We're smiling but 2nd place sucks" Feat. Alex Levinson
 
+> The following post is a mix of my thoughts, obersations, and advice to competitors, volunteers, and organizers after competing in CCDC at the regional and national level for 2 years.
+
 # [Building on success](#building-on-success)
-Coming off the back of a dark horse CCDC season we were back for one last face-off. Truth be told, there was a lot left on the table from last year, and we wanted a round two. Our biggest takeway from the 2023 season was that our technical strategy and team composition were largely correct. The difference this year? Execution. The solution? Speed.
+Coming off the back of a dark horse CCDC season we were back for one last face-off. Truth be told, we were happy to have placed 2nd in our previous and first outing at nationals. However, with an abundence of mistakes, there was a lot left on the table. Our biggest takeway from the 2023 season was that our technical strategy and team composition were largely correct. Given that these are the two biggest topics to address with aa new team, all signs pointed to a succssful 2024 season.
 
 # [Strategy](#strategy)
-How to win for dummies: running it back for real this time.
+![how to win](../images/HowToWin.png)
 ## [Mentality](#mentality)
-TODO: More here about mentality
+One of the biggest prerequisites I see in competitions like this is a hyper-competietive mindset. Successful teams and competitors take years to build and unhealthy addictions. In my opinion, teams only reach the neccessary level of dedication when there is a baseline level of convition paired with a ~~hatred~~rivalry against some adversary. Find adversary, and you'll find or develop the right people
 ## [Team Composition](#team-composition)
 Flexibility is mandatory in this competition. Every team needs 4 core roles: Windows, Linux, Networking, and Business/Inject Handler. Each of the 8 team members needs to pick a specialization, but also take up a secondary. It's impossible to perfectly predict the technical and business/inject challenges. Thus, people need to be ready to adapt at a moments notice. As far as our team goes, we continued with a relativly similar composition to the previous year. We retained a heavy emphasis on Linux, added some help on Windows, created dedicated roles for Web and Database, and ensured that everyone was capable of handling injects on their own.
 ### [Web Lead](#web-lead) 
