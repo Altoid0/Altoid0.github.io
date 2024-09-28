@@ -147,7 +147,7 @@ WR puts a lot of emphasis on real-world network, meaning you have a proper mix o
 NCCDC feels like more of a "competition" or maybe the better word is "game". When compared to WRCCDC as it tends to follow the same schema year after year. There is a general development pattern you can pick up on and your strategy doesn't really change year to year. Some of the pros to this type of a competition are that it's much more approachable, feasible to practice for, and establishes a good baseline level of quality. This also means that red team should theoretically be better prepared with scripts, infrastructure, and methodology.
 ### [NCCDC Competition Experience](#nccdc-competition-approach)
 #### [Day 0](#nccdc-day0)
-The day we landed was your typical travel day. Expensive airport food, expensive Ubers to the hotel, expensive Doordash diners ($30 per person budget goes crazy). We had some really good spicy Mexican food. We ordered so much we all got food commas, but it was definitely worth it. My personal goal for today was to acclimate enough so that I didn't wake up dead like last year.
+The day we landed was your typical travel day. Expensive airport food, expensive Ubers to the hotel, expensive DoorDash diners ($30 per person goes crazy). We had some really good spicy Mexican food. We ordered so much we all got food commas, but it was definitely worth it. My personal goal for today was to acclimate enough so that I didn't wake up dead like last year.
 #### [Day 1](#nccdc-day1)
 There was one big change we made for nationals. We did not walk into the competition with the intention to use our Windows dispatcher script (`Run/Dovetail.ps1`). 
 > Guy really put in all this effort and blogged about making this dispatcher script just to not use it 💀
