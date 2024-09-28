@@ -140,7 +140,7 @@ Reading the Metasploit output and knowing a bit about the SMB protocol led us to
 
 # [The Competition](#the-competition)
 ## [Regionals](#regionals)
-People in the greater CCDC community likely know a decent amount about how different the wester region is from the standard regional or even national event. There are pros and cons to everything, but the main thing to note is that you need a tailored plan going into WRCDC. There isn't a perfect 1 size fits all.
+People in the greater CCDC community likely know a decent amount about how different the wester region is from the standard regional or even national event. There are pros and cons to everything, but the main thing to note is that you need a tailored plan going into WRCCDC. There isn't a perfect 1 size fits all.
 ### [WRCCDC Competition Experience](#wrccdc-competition-approach)
 WR puts a lot of emphasis on real-world network, meaning you have a proper mix of physical and virtual systems/devices. This is really cool because you get things like an IP camera, but you can also occasionally end up with a virtualized PDP11... Regardless, the realism doesn't stop there. Often times services are domain joined or rely on Windows Active Directory for authentication. This introduces an interesting challenge because you can't just nuke network connectivity and randomly spam password changes. To succeed you need to understand the dependencies fast and deploy scripts en masse.
 ## [Nationals](#nationals)
