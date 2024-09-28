@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Altoid0
-tags: [ccdc, competitions, blue team, DFIR]
+tags: [ccdc, competitions, blue team]
 ---
 
 #### Table of contents
