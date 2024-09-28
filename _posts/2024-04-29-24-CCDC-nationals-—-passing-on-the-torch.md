@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Altoid0
-tags: [ccdc, competitions, blue team]
+tags: [ccdc, competitions, blue team, windows]
 ---
 
 #### Table of contents
