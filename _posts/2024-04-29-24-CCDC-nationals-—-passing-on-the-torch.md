@@ -3,8 +3,10 @@ layout: post
 author: Altoid0
 tags: [ccdc, competitions, blue team, windows]
 ---
+#### Preamble
+> Please feel free to skip around and read whatever is interesting to you. The following post is a mix of my thoughts, observations, and advice to competitors and organizers after competing in CCDC for 2 years and cybersecurity competitions for 7.
 
-#### Table of contents
+### Table of contents
 - [Building on success](#building-on-success)
 - [Strategy](#strategy)
   - [Mentality](#mentality)
@@ -13,7 +15,7 @@ tags: [ccdc, competitions, blue team, windows]
     - [Database Lead](#database-lead)
     - [Threat Hunter](#threat-hunter)
 - [Tool Development](#tool-development)
-  - [Speed](#speed)
+  - [Concurrency](#concurrency)
   - [Theoretical Script Limitations](#theoretical-script-limitations)
   - [Dovetail](#dovetail)
   - [Development Mind Games](#development-mind-games)
@@ -39,8 +41,6 @@ tags: [ccdc, competitions, blue team, windows]
 
 ![team picture](../images/24CCDCNats.png)
 "We're smiling but 2nd place sucks" Feat. Alex Levinson
-
-> The following post is a mix of my thoughts, observations, and advice to competitors, and organizers after competing in CCDC for 2 years and cybersecurity competitions for 7.
 
 # [Building on success](#building-on-success)
 Coming off the back of a dark horse CCDC season we were back for one last face-off. Truth be told, we were happy to have placed 2nd in our previous and first outing at nationals. However, with an abundance of mistakes, there was a lot left on the table. Our biggest takeaway from the 2023 season was that our technical strategy and team composition were largely correct. Given that these are the two biggest topics to address with aa new team, all signs pointed to a successful 2024 season.
@@ -72,7 +72,7 @@ Following our last year's tragedy with the database box being heavily targeted a
 Threat hunter this year was a little different for us. Instead of having someone dedicated to setting up a SIEM and managing all aspects of it, the role was more dynamic. Our threat hunter's responsibilities included SIEM stand-up (should it be needed), SIEM related inject tasking, and general linux assistance. This role changes the most round by round given the nature of each stage of the competition. At qualifiers we aren't given machines capable of running any type of SIEM (nice cyber defense comp). The threat hunter's job is to create some type of jank centralized logging solution that can at least ingest events for inject points. At regionals, we have resources to play with, so the goal is to have a full SIEM setup and ready for any inject related tasking. However, WRCCDC decided to be a little different this year (one could even be brave enough to say kind?). We were given a graylog instance with agents deployed, to Windows hosts at least. This was nice because it saved us setup time, however it also meant that we were sort of *forced* to use it since it didn't make sense investing more time to redeploy our own. The largest downside was our lack of familiarity with graylog. Our instance ended up breaking itself and it took some planning in between days one and two in order to get it back up and running. At nationals, we had total control over our environment and opted to use Elastic Stack. This solution has a lot of cool integrations and a good search dashboard. It's greatest appeal was the ability to create dedicated dashboards and subsequently, visualizations. The idea was to use these visualizations in inject responses as an easy means to answer analytical questions like "Top 10 ports by traffic" or "Top 5 users by failed logins". This role is a bit of a jack of all trades being that they must understand how to operate different SIEMs, Windows security, and linux security. It's crucial to have someone talented and dedicated who can pivot between tasks and assist where needed.
 
 # [Tool Development](#tool-development)
-## [Speed](#speed)
+## [Concurrency](#concurrency)
 If you've read my [previous post](../23-ccdc-nationals-reigniting-the-legacy) about the 2023 season, you'll know that my primary emphasis at the time was developing a system to operate at scale. Given our team composition was largely the same, my goal for the 2024 season was to optimize my workflow in terms of speed. Being fortunate enough to make Nationals as a Freshman allowed me to develop an understanding of the competition's quirks at each stage. WRCCDC tends to have at least one legacy or odd-ball box where as Nationals is surprisingly clean cut. Throughout the season I made multiple revisions to my previously garbage `Run.ps1` dispatcher script in an attempt to make it as fast as our Linux equivalent, [Coordinate](https://sourque.com/projects/coordinate/). As before, the core idea was to have our dispatcher utilize WinRM to fire off small tailored scripts against all boxes to take host inventory, implement hardened configs, and further deploy tools. The primary optimization I had in mind was concurrency (Yes I was using a "dispatcher" that was not concurrent :clown_face:). I'll share some funny moments and explain my Windows scripts in detail down below, but the most up-to-date and independently maintained version can be found [here](https://github.com/Altoid0/Dovetail).
 ## [Theoretical Script Limitations](#script-limitations)
 There are a couple of limitations with the way Windows script dispatching works, specifically in a CCDC environment. The biggest is the dependency of WinRM. WinRM honestly works way better than I had initially ever expected it to. It is enabled by default on modern Windows Servers and permitted through the firewall. However, in the name of security. Microsoft has made its firewall exclusion only applicable to the local subnet when a machine is configured to run on its "Public" firewall profile. Most of the times, CCDC starts with the firewall off/down. But, given that we saw defender enabled out of the box at NCCDC last year, I was skeptical about firewall starting down on all boxes. If we walk in with our first 15 minute plan relying heavily on the success of script deployment then any hiccup can add a significant hurdle to that plan. **It is worth noting that Dovetail.ps1 did work at nationals this year since firewall was off and most of the Windows boxes were all on the same subnet. However, it's important to understand the different scenarios you could encounter.**
@@ -193,15 +193,15 @@ The most important factor in all of this is a clear understanding of the end goa
 
 ## [CCDC As a Whole](#ccdc-as-a-whole)
 ### [CCDC is not Incident Response](#ccdc-is-not-incident-response)
-By far the biggest misconception is the belief that CCDC, in its current state, is an Incident Response competition. IR is a broad category, elements of which do appear in CCDC. However, as a whole, CCDC does not create the right environment to help competitors practice or learn IR. 
+By far the biggest misconception is the belief that CCDC, in its current state, is an Incident Response competition. IR is a broad category, elements of which do appear in CCDC. However, as a whole, CCDC does not create the right environment to help competitors practice or learn IR. I really feel bad for people that have been blindly fed this narrative because it creates an illusion for many inexperienced competitors. Someone could spend days, weeks, months, or years learning about IR and still not place well in CCDC. 
 > Why is that?
 
-CCDC awards points according to whether or not you have services online and operational. This creates a fixation on the services and their operation instead of actual defense. If something doesn't directly fix a service or prevent a service from going down it has little benefit. 
+CCDC awards points according to whether or not you have services online and operational. This creates a fixation on the services and their operation instead of actual detection and defense. If something doesn't directly fix a service or prevent a service from going down it has little benefit. 
 
-Want to setup a SIEM and monitor your sysmon and auditd logs? Want to develop a tool to detect some cool new adversarial TTP? Guess what, it's all largely useless compared to our manual "first 15 minute plan". There's no incentive to actually learn about a lot of job-relevant skills, build cool tools, or do things the "right" way. In the end, doing so will only mean you end up losing to other teams that understand the "game" at hand.
+Want to setup a SIEM and monitor your sysmon and auditd logs? Want to develop a tool to detect some cool new adversarial TTP? Guess what, it's all largely useless compared to our manual "first 15 minute plan". There's no incentive to actually learn about a lot of job-relevant skills, build cool real-world tools, or do things the "right" way. In the end, doing so will only mean you end up losing to other teams that understand the "game" at hand.
 > So how can this be fixed?
 
-The competition should be restructured/reorganized to require and reward real-world IR and sysadmin skills. Give us prepared artifacts to analyze, generate network logs for us to hunt through, hell even preplant beacons and reward teams that provide an accurate root cause analysis report. Don't let me run through my "first 15" plan and farm points for the rest of the competition.
+The competition should be restructured/reorganized to require and reward real-world IR and sysadmin skills. Give us prepared artifacts to analyze, generate network logs for us to hunt through, hell even preplant beacons (just not rootkits like SECCDC 😊) and reward teams that provide an accurate root cause analysis report. Don't let me run through my "first 15" plan and farm points for the rest of the competition.
 ### [CCDC shouldn't be IT help desk](#ccdc-shouldnt-be-it-help-desk)
 Remove orange team calls. I understand and agree with the need for orange team as a whole, manual user testing to add realism and prevent cheese strategies (like converting your PHP app to static HTML pages LOL). However, for a competition that focuses so much on real-time cybersecurity, I don't see the value in picking up the phone with my customer service voice and informing users about our various fictitious service offerings or conducting live password changes by replacing password hashes in a database. I'd rather get more actual business interactions like questions from a mock CISO, CEO, Investors, etc. Some curve balls like testing teams with a vishing call would be a really valuable learning opportunity too. I think this is a far better way to evaluate and build competitor soft skills in a mechanism thats more meaningful. Competitions like CPTC do a very good job of this with mock client interactions.
 
