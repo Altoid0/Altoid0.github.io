@@ -195,6 +195,7 @@ There is a clear advantage to one of the methods assuming you aren't physically 
 The most important factor in all of this is a clear understanding of the end goal: to prevent teams from using prestaged resources. Well unfortunately, I can think of at least 3 different ways I could have prestaged scripts and tools to cheat, despite the whitelist. I don't think the proxy adds any benefit in its current state. In fact, it has only hindered us from trying to do the right things, like setup our own SIEM.
 
 ## [CCDC As a Whole](#ccdc-as-a-whole)
+> In come some personal hot takes
 ### [CCDC is not Incident Response](#ccdc-is-not-incident-response)
 By far the biggest misconception is the belief that CCDC, in its current state, is an Incident Response competition. IR is a broad category, elements of which do appear in CCDC. However, as a whole, CCDC does not create the right environment to help competitors practice or learn IR. I really feel bad for people that have been blindly fed this narrative because it creates an illusion for many inexperienced competitors. Someone could spend days, weeks, months, or years learning about IR and still not place well in CCDC. 
 > Why is that?
