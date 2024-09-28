@@ -22,17 +22,17 @@ tags: [ccdc, competitions, blue team, windows]
     - [Wininit](#wininit)
     - [Misc.ps1](#miscps1)
 - [The Competition](#the-competition)
-  - [WRCCDC](#wrccdc)
+  - [Regionals](#regionals)
     - [WRCCDC Competition Experience](#wrccdc-competition-experience)
-  - [NCCDC](#nccdc)
+  - [Nationals](#nationals)
     - [NCCDC Competition Experience](#nccdc-competition-experience)
       - [Day 0](#day-0)
       - [Day 1](#day-1)
       - [Day 2](#day-2)
       - [Day 3](#day-3)
 - [Feedback](#feedback)
-  - [WRCCDC](#wrccdc-1)
-  - [NCCDC](#nccdc-1)
+  - [WRCCDC](#wrccdc)
+  - [NCCDC](#nccdc)
   - [CCDC As a Whole](#ccdc-as-a-whole)
     - [CCDC is not Incident Response](#ccdc-is-not-incident-response)
     - [CCDC shouldn't be IT help desk](#ccdc-shouldnt-be-it-help-desk)
@@ -136,11 +136,11 @@ Like I said, we found this completely on accident. When creating a new Windows S
 Reading the Metasploit output and knowing a bit about the SMB protocol led us to check the OOB configuration for Null Session Pipes in Local Security Policy. We found that new VMs created from our ISO were missing a single pipe and coincidentally (or intentionally?) this was one of the pipes that Metasploit tries to connect to as part of the exploit chain.
 
 # [The Competition](#the-competition)
-## [WRCCDC](#wrccdc)
+## [Regionals](#regionals)
 People in the greater CCDC community likely know a decent amount about how different the wester region is from the standard regional or even national event. There are pros and cons to everything, but the main thing to note is that you need a tailored plan going into WRCDC. There isn't a perfect 1 size fits all.
 ### [WRCCDC Competition Experience](#wrccdc-competition-approach)
 WR puts a lot of emphasis on real-world network, meaning you have a proper mix of physical and virtual systems/devices. This is really cool because you get things like an IP camera, but you can also occasionally end up with a virtualized PDP11... Regardless, the realism doesn't stop there. Often times services are domain joined or rely on Windows Active Directory for authentication. This introduces an interesting challenge because you can't just nuke network connectivity and randomly spam password changes. To succeed you need to understand the dependencies fast and deploy scripts en masse.
-## [NCCDC](#nccdc)
+## [Nationals](#nationals)
 NCCDC feels like more of a "competition" or maybe the better word is "game". When compared to WRCCDC as it tends to follow the same schema year after year. There is a general development pattern you can pick up on and your strategy doesn't really change year to year. Some of the pros to this type of a competition are that it's much more approachable, feasible to practice for, and establishes a good baseline level of quality. This also means that red team should theoretically be better prepared with scripts, infrastructure, and methodology.
 ### [NCCDC Competition Experience](#nccdc-competition-approach)
 #### [Day 0](#nccdc-day0)
