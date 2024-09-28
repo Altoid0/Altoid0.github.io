@@ -118,7 +118,10 @@ Never seen that in my life
 ![wininit3](../images/Wininit3.png)
 Reminds me of that one J Cole lyric: [No Role Modelz](https://genius.com/4476263)
 
-Despite not breaking any written rules I did end up removing it when asked by competition organizers. They're probably writing the rule in as you read this. You can Ctrl+F [this](https://github.com/cpp-cyber/blue/commit/c511031b91c21ec365b3ff4532479433a36b6834) commit for "wininit", Github may or may not show all the spaces. Regardless, this was probably the comedic highlight of my 7 years competing in cyber competitions. The moral of the story? Read the rules, read code before running it, and have fun.
+Despite not breaking any written rules I did end up removing it when asked by competition organizers. They're probably writing the rule as you read this. You can Ctrl+F [this](https://github.com/cpp-cyber/blue/commit/c511031b91c21ec365b3ff4532479433a36b6834) commit for "wininit", Github may or may not show all the spaces. Regardless, this was probably the comedic highlight of my 7 years competing in cyber competitions. 
+>The moral of the story? 
+
+Read the rules, read code before running it, and have fun.
 
 ### [Misc.ps1](#misc.ps1)
 `Misc.ps1` is another really interesting script that uses a technique we accidentally stumbled upon. `Misc.ps1` was actually created to mitigate exploitation of MS17-010 (Eternal Blue).
