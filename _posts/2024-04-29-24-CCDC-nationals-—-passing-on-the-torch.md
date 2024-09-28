@@ -213,4 +213,6 @@ Remove orange team calls. I understand and agree with the need for orange team a
 ## [Learning Plateau](#learning-plateau)
 As it stands I don't think there is anything left for me to learn from CCDC. I've done everything I could when it comes to perfecting the Windows role, which means that added effort  would have diminishing returns. I could start exploring other corners of security such as detection engineering or SOC analysis skills. However, doing so would only result in a net negative in competition, learning this in my own time would be better. I could do a 180 and start focusing on other challenges like Linux or networking (believe me I've considered this). But, with limited time and my recent internship experience opening my eyes to software security engineering I think it's time I explore other disciplines. Part of me will always want to come back to CCDC because of my hyper-competitive nature, but I have to be realistic about the opportunity cost.
 
+Thank you for attending my ~~TED Talk~~ yap
+
 It's finally time to pass on the torch.
