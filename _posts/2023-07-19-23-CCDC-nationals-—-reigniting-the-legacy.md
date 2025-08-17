@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Tanay Shah
+author: Altoid0
 tags: [ccdc, blue team, competitions]
 ---
 
@@ -23,7 +23,7 @@ tags: [ccdc, blue team, competitions]
   - [Placement](#placement)
   - [Red Team](#red-team)
 
-![team picture](../images/CCDCNats.jpg)
+![team picture](../images/23CCDCNats.jpg)
 Another day another national competition another picture where I looked cooked af. This time around: CCDC[^1]
 
 If you are from the red team or are interested in my thoughts on the red team I recommend you skip to the [bottom](#red-team) of this post. 
@@ -86,7 +86,7 @@ For example: The entire concept of our Fix.ps1 script came from UCI, Php.ps1 con
 ## [Preparation](#preparation)
 When it came to deriving our strategy we had a pretty good idea of the general things we need to do. We knew we had to have a multi-stage plan that progressed in parallel with red team operations. And we knew the first stage had to be fast enough to hopefully disrupt some of red team's initial access and persistence mechanisms. However, nothing beats real experience and so to have [Shane](https://sourque.com) (2022 CCDC Runner-up) constantly giving us feedback was invaluable. Truth be told, though we were a first-time national team, thanks to our GOAT mentor, CyberPatriot experience, and hours of OSINT, I'd argue we understood the competition better than most veteran teams. 
 
-Without a doubt I'm most proud of our competition OSINT, shout out to [Justin](https://www.covertops.xyz) on our team for heading these efforts. CCDC has been around for a while and finding past resources, blogs, and tools is not at all hard to do on a surface level. However, you have to dig deeper for the good good. Someone very knowledgeable on the subject matter I talked to put it this way, "Red team is a little bit of a \****-measuring contest", so what's the point if you can't gloat about it a little? Hence, there's a lot to learn from stalking known members' GitHub accounts, Twitter posts, books, blog posts, and IRL conversations. Going into nationals we knew select bits of what C2 framework we were going to get hit with, what type of keyloggers would be deployed, what persistence mechanisms would be implanted, what the attack path would look like, and what insane tools they had been cooking. We had mitigations/mental notes for almost everything that had been publicly tied to NCCDC red team members in the last few years, and even the current year. I want to say we are among the first team to go to this extent, but I can't say this with confidence since a lot of other teams like to keep quiet about what they do. Either way, our red team picked up on this and we had quite a fun chat with them after day 2.
+Without a doubt I'm most proud of our competition OSINT, shout out to [Justin](https://www.covertops.xyz) on our team for heading these efforts. CCDC has been around for a while and finding past resources, blogs, and tools is not at all hard to do on a surface level. However, you have to dig deeper for the good good. Someone very knowledgeable on the subject matter I talked to put it this way, "Red team is a little bit of a \****-measuring contest", so what's the point if you can't gloat about it a little? Hence, there's a lot to learn from stalking known members' GitHub accounts, Twitter posts, books, blog posts, and IRL conversations. Going into nationals we knew select bits of what C2 framework we were going to get hit with, what type of keyloggers would be deployed, what persistence mechanisms would be implanted, what the attack path would look like, and what insane tools they had been cooking. We had mitigations/mental notes for almost everything that had been publicly tied to NCCDC red team members in the last few years, and even the current year. Our red team picked up on this and we had quite a fun chat with them after day 2.
 
 # [The Competition](#the-competition)
 Up the smoke

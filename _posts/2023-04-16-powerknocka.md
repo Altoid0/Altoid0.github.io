@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Tanay Shah
+author: Altoid0
 tags: [windows, persistence, log poisoning, wmi, powershell]
 ---
 
