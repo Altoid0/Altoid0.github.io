@@ -2,7 +2,7 @@ title: Altoid0
 author: Altoid0
 url: https://Altoid0.github.io # root address of the site
 description: > # description of the site (multiple lines allowed)
-  Student at Cal Poly Pomona with a focus in cybersecurity competitions and research. CCDC, CPTC, CyberPatriot, and Hivestorm, done them all. Powershell is my love language with Java to supplement for real programming.
+  Student at Cal Poly Pomona with a focus in cybersecurity competitions and research. CCDC, CPTC, CyberPatriot, and Hivestorm, done them all. Powershell is my love language with Python/Java to supplement for real programming.
 
 permalink: /:slug
 
